@@ -12,6 +12,16 @@
 </head>
 
 <body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="./img/download.png" alt="BadWord logo" width="60" height="60">
+                    <h1 class="d-inline-block vertical-aling-middle">Censor bad words</h1>
+                </a>
+            </div>
+        </nav>
+    </header>
     <main>
         <div class="container">
             <div class="row">
@@ -28,7 +38,7 @@
                                 placeholder="Enter the word to censor">
                         </div>
                         <div class="col-12">
-                            <button class="btn btn-primary" type="submit">Invia</button>
+                            <button class="btn btn-danger" type="submit">Invia</button>
                         </div>
                     </form>
                 </div>

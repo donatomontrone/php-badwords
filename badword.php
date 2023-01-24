@@ -16,32 +16,58 @@ $badWord = $_POST['badWord']
 </head>
 
 <body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="./img/download.png" alt="BadWord logo" width="60" height="60">
+                    <h1 class="d-inline-block vertical-aling-middle">Censor bad words</h1>
+                </a>
+            </div>
+        </nav>
+    </header>
     <main>
         <div class="container">
-            <div class="row text-center">
+            <div class="row justify-content-center g-3 align-items-stretch">
                 <div class="col-6">
-                    <h2> Paragraph </h2>
-                    <p> <?php
-                        echo trim($paragraph);
-                        ?> </p>
+                    <div class="card">
+                        <div class="card-header"> Paragraph </div>
+                        <div class="card-body">
+                            <h3 class="card-title"> <?php
+                                                    echo trim($paragraph);
+                                                    ?> </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="card">
+                        <div class="card-header"> Length </div>
+                        <div class="card-body">
+                            <h3 class="card-title text-center"> <?php
+                                                                echo strlen(trim($paragraph));
+                                                                ?> </h3>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-6">
-                    <h2> Length </h2>
-                    <p> <?php
-                        echo strlen($paragraph);
-                        ?> </p>
+                    <div class="card">
+                        <div class="card-header"> Paragraph </div>
+                        <div class="card-body">
+                            <h3 class="card-title"> <?php
+                                                    echo str_replace($badWord, '***', $paragraph);;
+                                                    ?> </h4>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-6">
-                    <h2> Paragraph </h2>
-                    <p> <?php
-                        echo str_replace($badWord, '***', $paragraph);
-                        ?> </p>
-                </div>
-                <div class="col-6">
-                    <h2> Length </h2>
-                    <p> <?php
-                        echo strlen(str_replace($badWord, '***', $paragraph));
-                        ?> </p>
+                <div class="col-2">
+                    <div class="card">
+                        <div class="card-header"> Length </div>
+                        <div class="card-body">
+                            <h3 class="card-title text-center"> <?php
+                                                                echo strlen(str_replace($badWord, '***', $paragraph));
+                                                                ?> </h3>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
